@@ -6,32 +6,8 @@ float media(float p1, float p2, float atv)
     med = p1 * 0.35 + p2 * 0.35 + atv;
     return med;
 }
-int main()
-{
-    float p1, p2, atv, med;
-    int i;
-    for (i = 0; i < 2; i++)
-    {
-        printf("Insira nota da p%d\n", i + 1);
-        if (i == 0)
-        {
-            scanf("%f", &p1);
-        }
-        else
-        {
-            scanf("%f", &p2);
-        }
-    }
-    printf("Informe pontuação das atividades\n");
-    scanf("%f", &atv);
-    med = media(p1, p2, atv);
-    printf("Media do aluno:%.2f\n", med);
-    if (media(p1, p2, atv) >= 6)
-    {
-        printf("Aluno aprovado\n");
-    }
-    else
-    {
+void Substitutiva(float p1, float p2, float atv, float med){
+
         printf("Aluno precisara de sub\n");
         if (p1 < p2)
         {
@@ -54,7 +30,38 @@ int main()
         {
             printf("Aluno reprovado\n");
         }
+}
+void Vericar_Aluno(float p1, float p2, float atv, float med){
+    if (med >= 6)
+    {
+        printf("Aluno aprovado\n");
     }
-    system("pause");
+    else
+    {
+        Substitutiva(p1, p2, atv, med);
+    }
+}
+
+int main()
+{
+    float p1, p2, atv, med;
+    int i;
+    for (i = 0; i < 2; i++)
+    {
+        printf("Insira nota da p%d\n", i + 1);
+        if (i == 0)
+        {
+            scanf("%f", &p1);
+        }
+        else
+        {
+            scanf("%f", &p2);
+        }
+    }
+    printf("Informe pontuação das atividades\n");
+    scanf("%f", &atv);
+    med = media(p1, p2, atv);
+    printf("Media do aluno:%.2f\n", med);
+    Vericar_Aluno(p1, p2, atv, med);
     return 0;
 }
