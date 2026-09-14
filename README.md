@@ -13,7 +13,7 @@ exercícios e materiais produzidos ao longo do semestre, versionados conforme fo
 | Pasta | Disciplina | O que tem |
 |---|---|---|
 | [`Estrutura-de-dados/`](./Estrutura-de-dados) | Estrutura de Dados | Exercícios e implementações em C++ <!-- ⬇️ detalhe aqui: listas, pilhas, filas, árvores... --> |
-| [`Sistemas-Operacionais/`](./Sistemas-Operacionais) | Sistemas Operacionais | <!-- ⬇️ descreva em uma linha o que tem aqui --> |
+| [`Sistemas-Operacionais/`](./Sistemas-Operacionais) | Sistemas Operacionais | Virtualização de sistemas <!-- ⬇️ descreva em uma linha o que tem aqui --> |
 
 <!-- ⬇️ Conforme o semestre avança, adicione uma linha por disciplina nova.
      Sugestão de próximas: IHC, Engenharia de Software II, Estatística. -->
