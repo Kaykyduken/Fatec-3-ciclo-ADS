@@ -30,7 +30,13 @@ localizar um exercício específico sem caçar no histórico de commits.
 Fatec-3-ciclo-ADS/
 ├── Estrutura-de-dados/
 │   └── Aula3/
+│   └── Aula4/
+│   
 ├── Sistemas-Operacionais/
+│   └── Aula3/
+│   └── Aula4/
+│   └── Aula5/
+│
 └── README.md
 ```
 
@@ -41,7 +47,7 @@ Fatec-3-ciclo-ADS/
 Os arquivos de Estrutura de Dados são programas independentes. Para rodar qualquer um:
 
 ```bash
-g++ arquivo.cpp -o programa
+c++ arquivo.cpp -o programa
 ./programa
 ```
 
