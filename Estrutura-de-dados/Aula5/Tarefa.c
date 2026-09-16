@@ -6,7 +6,7 @@ int codigos [10];
 char nomes [10][100];
 float valores [10];
 int estoque [10];
-//Lista de produtos pra teste
+//PRODUTOS TESTES
 int presalvo(){
     
   codigos[0] = 1;
@@ -65,10 +65,12 @@ int listar(){
           if (estoque[i] == 0)
     {
       printf("Produto sem estoque\n");
+      printf("---------////---------\n");
     }
     else
     {
         printf("Estoque: %d\n",estoque[i]);
+        printf("---------////---------\n");
     }
     }
   }
@@ -83,16 +85,19 @@ for (int i = 0; i < 10; i++)
 {
   if (codigos[i] == codigo)
   {
+    printf("---------////---------\n");
     printf("Código: %d\n",codigos[i]);
     printf("Nome: %s\n",nomes[i]);
     printf("Valor: %.2f\n",valores[i]);
     if (estoque[i] == 0)
     {
       printf("Produto sem estoque\n");
+      printf("---------////---------\n");
     }
     else
     {
         printf("Estoque: %d\n",estoque[i]);
+        printf("---------////---------\n");
     }
   }else
   {
@@ -118,7 +123,8 @@ presalvo();
 while (i == 1)
 {
   printf("Escolha uma opção:\n1- Cadastrar produto\n2- Listar produtos\n3- Procurar por código\n4- encerrar as compras\n");
-  switch (scanf("%d",&e))
+  scanf("%d",&e);
+  switch (e)
   {
   case 1:
     cadastrar();
@@ -132,6 +138,7 @@ while (i == 1)
   case 4:
     listar();
     printf("Encerrando as compras...\n");
+    i = 0;
     break;
   default:
     printf("Opção inválida!\n");
