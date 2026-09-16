@@ -3,9 +3,9 @@
 void timer(){
     int cont = 0;
     long tempo,fps;
-    fps = 30000000;
+    fps = 60000000;
     tempo = fps;
-    for (int i = 0; i < 30000000; i++)
+    for (int i = 0; i < fps; i++)
     {
         cont++;
     }
