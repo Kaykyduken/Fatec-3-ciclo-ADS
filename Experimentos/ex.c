@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-void timer(){
+void timer()
+{
     int cont = 0;
-    long tempo,fps;
+    long tempo, fps;
     fps = 60000000;
     tempo = fps;
-    for (int i = 0; i < fps; i++)
+    for (int i = 0; i < tempo; i++)
     {
         cont++;
     }
 }
-int main(){
+int main()
+{
     int i = 1;
     while (i == 1)
     {
@@ -34,7 +36,5 @@ int main(){
         timer();
         printf(" |\n");
         timer();
-
     }
-    
 }

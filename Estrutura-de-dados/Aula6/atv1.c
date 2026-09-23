@@ -1,40 +1,44 @@
-#include "atv1.h"
+#include "cubo.h"
+#include "div.h"
+#include "mult.h"
+#include "soma.h"
+#include "sub.h"
+#include <stdio.h>
+#include <stdlib.h>
 int main()
 {
-  setlocale(LC_ALL, "UTF-8");
-  int i = 1, e, teste;
-  printf("Deseja testar com produtos pré-cadastrados? ou cadastrar tudo do zero?\n1-Sim\n0-Não\n");
-  scanf("%d", &teste);
-  if (teste == 1)
-  {
-    presalvo();
-  }
-  while (i == 1)
-  {
-    printf("Escolha uma opção:\n1- Cadastrar produto\n2- Listar produtos\n3- Procurar por código\n4- Realizar Compra\n5- Encerrar Sistema\n");
+    float n0, n1, r;
+    int e;
+    printf("insira 2 numeros:\n");
+    scanf("%d", &n0);
+    scanf("%d", &n1);
+    printf("\nEscolha uma operação\n1 - soma\n2 - subtracao\n3 - multiplicacao\n4 - divisao\n5 - cubo");
     scanf("%d", &e);
     switch (e)
     {
     case 1:
-      cadastrar();
-      break;
+        r = soma(n0, n1);
+
+        break;
     case 2:
-      listar();
-      break;
+        r = sub(n0, n1);
+
+        break;
     case 3:
-      procurarporcodigo();
-      break;
+        r = mult(n0, n1);
+
+        break;
     case 4:
-      compra();
-      break;
+        r = div(n0, n1);
+
+        break;
     case 5:
-      listar();
-      printf("Encerrando Sistema...\n");
-      i = 0;
-      break;
+        r = cubo(n0, n1);
+
+        break;
+
     default:
-      printf("Opção inválida!\n");
-      break;
+        break;
     }
-  }
+    printf("Resultado:%.2f",r);
 }
