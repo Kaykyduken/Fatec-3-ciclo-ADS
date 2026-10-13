@@ -120,6 +120,25 @@ Observações:
 - `WEB_CONCURRENCY=1` definido automaticamente "com base nas CPUs disponíveis na instância" → o Render dimensiona a aplicação pela cota (0,15 CPU), não pelas 8 CPUs que `os.cpus()` mostra.
 - Comparação: Vercel ~28 s no total (build de 10–12 s, sem etapa de iniciar processo/health check, porque a função só é executada quando chega uma requisição).
 
+## Teste de cold start (vídeo de 13/10/2026, 19:40, ~1h10 depois da última leitura)
+
+Tempos medidos quadro a quadro no vídeo (precisão de ~0,25 s):
+
+| | Vercel | Render |
+|---|---|---|
+| Do clique até a página (HTML) aparecer | ~1,0 s | ~0,75 s |
+| Do clique até os dados (/api/info) aparecerem | **~1,5 s** | **~1,0 s** |
+| Uptime do SO na leitura | 0h 0m | 103d 18h |
+| Tempo de atividade do processo | **0 min 6 s** | **7 min 33 s** |
+| Hostname | 169.254.35.55 (nova microVM) | srv-…-hibernate-7bfc569dd6-h7wwq (novo pod; antes era …-g4j97) |
+| Kernel | 5.10.255-…amzn2 | **6.8.0-1057-aws** (antes 7.0.0-1009-aws → outro servidor físico) |
+| Memória usada pelo container | — | 43,15 MB de 512 MB (8,4 %) |
+
+Interpretação:
+- **Vercel**: houve cold start de fato (processo com 6 s de vida, SO recém-iniciado), e mesmo assim os dados chegaram em ~1,5 s. A microVM Firecracker sobe em fração de segundo e a função é pequena.
+- **Render**: a página abriu rápido (~1 s) porque o serviço **já estava acordado**: o processo tinha 7 min 33 s → foi recriado por volta de 19:33. Como o pod, o host (uptime 103 dias) e até o kernel mudaram, o serviço hibernou depois da última leitura (~18:27) e foi recriado em outro servidor. O cold start do Render (o painel fala em "50 segundos ou mais") aconteceu antes do vídeo e não foi cronometrado.
+- Conclusão parcial: hibernação no Render recria o container inteiro (novo pod, novo host, novo kernel); na Vercel, cada instância é descartável e criada sob demanda em ~1 s.
+
 ## Pendente
 
 - [x] Prints do Render (dashboard, SO/CPU/memória, ambiente, processo)
