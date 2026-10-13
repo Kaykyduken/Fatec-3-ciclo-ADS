@@ -12,46 +12,80 @@ exercícios e materiais produzidos ao longo do semestre, versionados conforme fo
 
 | Pasta | Disciplina | O que tem |
 |---|---|---|
-| [`Estrutura-de-dados/`](./Estrutura-de-dados) | Estrutura de Dados | Exercícios e implementações em C++ <!-- ⬇️ detalhe aqui: listas, pilhas, filas, árvores... --> |
-| [`Sistemas-Operacionais/`](./Sistemas-Operacionais) | Sistemas Operacionais | Virtualização de sistemas <!-- ⬇️ descreva em uma linha o que tem aqui --> |
+| [`Estrutura-de-dados/`](./Estrutura-de-dados) | Estrutura de Dados | Exercícios em C++ e C: condicionais, funções, vetores e modularização com arquivos `.h` |
+| [`Sistemas-Operacionais/`](./Sistemas-Operacionais) | Sistemas Operacionais | Instalação do Windows, pesquisa sobre SOs, máquinas virtuais e aplicação Node.js publicada em nuvem (Render e Vercel) |
+| [`Experimentos/`](./Experimentos) | — | Testes livres em C, fora das atividades das aulas |
 
-<!-- ⬇️ Conforme o semestre avança, adicione uma linha por disciplina nova.
-     Sugestão de próximas: IHC, Engenharia de Software II, Estatística. -->
+### Estrutura de Dados
+
+| Aula | Conteúdo |
+|---|---|
+| [`Aula3/`](./Estrutura-de-dados/Aula3) | 9 exercícios em C++ com entrada de dados e estruturas condicionais |
+| [`Aula4/`](./Estrutura-de-dados/Aula4) | Funções em C: cálculo de média com prova substitutiva |
+| [`Aula5/`](./Estrutura-de-dados/Aula5) | Sistema de cadastro e estoque de produtos com vetores (`Tarefa.c`) |
+| [`Aula6/`](./Estrutura-de-dados/Aula6) | Modularização: calculadora com operações separadas em arquivos de cabeçalho (`soma.h`, `sub.h`, `mult.h`, `div.h`, `cubo.h`) |
+
+### Sistemas Operacionais
+
+| Aula | Conteúdo |
+|---|---|
+| [`Aula-3/`](./Sistemas-Operacionais/Aula-3) | Atividade da aula |
+| [`Aula-4/`](./Sistemas-Operacionais/Aula-4) | [Formatação e instalação do Windows](./Sistemas-Operacionais/Aula-4/Atividade_Formatacao_Instalacao_Windows.md) (componentes do SO, kernel, modos de execução) e [pesquisa sobre cinco sistemas operacionais](./Sistemas-Operacionais/Aula-4/Pesquisa_5_Sistemas_Operacionais.md) em contextos diferentes |
+| [`Aula-5/`](./Sistemas-Operacionais/Aula-5) | [Tutorial de criação de máquina virtual](./Sistemas-Operacionais/Aula-5/tutorial-maquina-virtual.md) e instalação de um SO |
+| [`Aula-6/`](./Sistemas-Operacionais/Aula-6) | [Manual do `cloud-so-app`](./Sistemas-Operacionais/Aula-6/MANUAL.md): aplicação Express que exibe informações do SO, publicada no Render e comparada com a execução local |
+| [`Aula-7/`](./Sistemas-Operacionais/Aula-7) | [Relatório comparativo Local × Render × Vercel](./Sistemas-Operacionais/Aula-7/RELATORIO.md): o `cloud-so-app` virou um dashboard de monitoramento com gerenciador de tarefas e foi publicado também na Vercel (serverless) |
+
+**Repositórios relacionados**
+
+- [`cloud-so-app`](https://github.com/Kaykyduken/cloud-so-app) — código da aplicação das Aulas 6 e 7
+  ([Render](https://cloud-so-app-ul2l.onrender.com) · [Vercel](https://cloud-so-app.vercel.app))
+- [`historia-sistemas-operacionais`](https://github.com/Kaykyduken/historia-sistemas-operacionais) — panorama histórico dos sistemas operacionais, organizado por eras
 
 ---
 
 ## Organização
 
 Cada disciplina tem sua própria pasta, e dentro dela o material é separado por aula ou
-atividade (`Aula1/`, `Aula2/`, …). Assim dá para acompanhar a progressão do semestre e
+atividade (`Aula3/`, `Aula-4/`, …). Assim dá para acompanhar a progressão do semestre e
 localizar um exercício específico sem caçar no histórico de commits.
 
 ```
 Fatec-3-ciclo-ADS/
 ├── Estrutura-de-dados/
-│   └── Aula3/
-│   └── Aula4/
-│   
-├── Sistemas-Operacionais/
-│   └── Aula3/
-│   └── Aula4/
-│   └── Aula5/
+│   ├── Aula3/          # C++: condicionais
+│   ├── Aula4/          # C: funções
+│   ├── Aula5/          # C: vetores (estoque)
+│   └── Aula6/          # C: modularização com .h
 │
+├── Sistemas-Operacionais/
+│   ├── Aula-3/
+│   ├── Aula-4/         # instalação do Windows + pesquisa de 5 SOs
+│   ├── Aula-5/         # máquina virtual (com images/)
+│   ├── Aula-6/         # MANUAL.md + prints/
+│   └── Aula-7/         # RELATORIO.md + prints/ + logs/
+│
+├── Experimentos/
 └── README.md
 ```
 
 ---
 
-## Compilando os exercícios de C++
+## Compilando os exercícios de C e C++
 
 Os arquivos de Estrutura de Dados são programas independentes. Para rodar qualquer um:
 
 ```bash
-c++ arquivo.cpp -o programa
+# C++
+g++ arquivo.cpp -o programa
+./programa
+
+# C
+gcc arquivo.c -o programa
 ./programa
 ```
 
-<!-- ⬇️ Se algum exercício precisar de flags ou entrada específica, anote aqui. -->
+No Windows, o executável gerado é `programa.exe` (rode com `.\programa.exe`).
+O exercício da Aula 6 inclui os cabeçalhos da mesma pasta, então compile a partir dela.
 
 ---
 
