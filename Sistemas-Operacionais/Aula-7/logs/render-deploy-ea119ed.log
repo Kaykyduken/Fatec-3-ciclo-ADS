@@ -1,0 +1,35 @@
+2026-10-13T21:06:04.653503664Z ==> Downloading cache...
+2026-10-13T21:06:04.677639229Z ==> Cloning from https://github.com/Kaykyduken/cloud-so-app
+2026-10-13T21:06:05.737305499Z ==> Checking out commit ea119ed1f25f3cdb4d05749cae72476d51412d61 in branch main
+2026-10-13T21:06:06.358054441Z ==> Downloaded 4.3MB in 0s. Extraction took 0s.
+2026-10-13T21:06:07.037839438Z ==> Requesting Node.js version 22.x
+2026-10-13T21:06:07.132080408Z ==> Using Node.js version 22.23.3 via /opt/render/project/src/package.json
+2026-10-13T21:06:07.132092442Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2026-10-13T21:06:07.132210834Z ==> Installing Node.js version 22.23.3...
+2026-10-13T21:06:08.078199966Z ==> Running build command 'npm install'...
+2026-10-13T21:06:08.493578182Z 
+2026-10-13T21:06:08.493593451Z up to date, audited 71 packages in 351ms
+2026-10-13T21:06:08.493607146Z 
+2026-10-13T21:06:08.493618359Z 29 packages are looking for funding
+2026-10-13T21:06:08.493621484Z   run `npm fund` for details
+2026-10-13T21:06:08.494441799Z 
+2026-10-13T21:06:08.494446464Z found 0 vulnerabilities
+2026-10-13T21:06:08.98878273Z ==> Uploading build...
+2026-10-13T21:06:11.120058395Z ==> Uploaded in 1.6s. Compression took 0.5s
+2026-10-13T21:06:11.121314527Z ==> Build successful 🎉
+2026-10-13T21:06:12.60984277Z ==> Deploying...
+2026-10-13T21:06:12.700888832Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-10-13T21:06:21.919329088Z ==> Running 'npm start'
+2026-10-13T21:06:23.610571976Z 
+2026-10-13T21:06:23.610596277Z > cloud-so-app@1.0.0 start
+2026-10-13T21:06:23.610602097Z > node index.js
+2026-10-13T21:06:23.610604497Z 
+2026-10-13T21:06:24.714258747Z cloud-so-app rodando na porta 10000
+2026-10-13T21:06:24.714288408Z Acesse: http://localhost:10000
+2026-10-13T21:06:33.845161096Z ==> Your service is live 🎉
+2026-10-13T21:06:34.135420843Z ==> 
+2026-10-13T21:06:34.172943782Z ==> ///////////////////////////////////////////////////////////
+2026-10-13T21:06:34.177900945Z ==> 
+2026-10-13T21:06:34.184643679Z ==> Available at your primary URL https://cloud-so-app-ul2l.onrender.com
+2026-10-13T21:06:34.193579111Z ==> 
+2026-10-13T21:06:34.201175353Z ==> ///////////////////////////////////////////////////////////
