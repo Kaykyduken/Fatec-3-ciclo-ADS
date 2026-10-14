@@ -38,7 +38,7 @@ int contarPalavras(char texto[])
 void substituirVogais(char frase[4][110])
 {
     char letra;
-    strcpy(frase[2], frase[0]);
+    strcpy(frase[2], frase[1]);
     for (int i = 0; frase[2][i] != '\0'; i++)
     {
         letra = tolower((unsigned char) frase[2][i]);
@@ -56,7 +56,7 @@ void substituirVogais(char frase[4][110])
 // cifrar
 void cifrar(char frase[4][110])
 {
-    strcpy(frase[3], frase[0]);
+    strcpy(frase[3], frase[2]);
     for (int i = 0; frase[3][i] != '\0'; i++)
     {
         if (i < 5)
@@ -102,7 +102,7 @@ int main()
     printf("Quantidade de palavras: %d\n", contarPalavras(frase[0]));
     printf("Frase concatenada: %s\n", frase[1]);
     printf("Frase alterada: %s\n", frase[2]);
-
+    printf("Frase cifrada: %s\n", frase[3]);
     // passo 11: as quatro versões juntas
     printf("\n--- Resumo ---\n");
     printf("Original:    %s\n", frase[0]);
@@ -110,5 +110,7 @@ int main()
     printf("Alterada:    %s\n", frase[2]);
     printf("Cifrada:     %s\n", frase[3]);
 
+    printf("\nDanilo isso daqui era pra ser um gerador de senha?\n");
+    system("pause");
     return 0;
 }
