@@ -12,7 +12,7 @@ exercícios e materiais produzidos ao longo do semestre, versionados conforme fo
 
 | Pasta | Disciplina | O que tem |
 |---|---|---|
-| [`Estrutura-de-dados/`](./Estrutura-de-dados) | Estrutura de Dados | Exercícios em C++ e C: condicionais, funções, vetores e modularização com arquivos `.h` |
+| [`Estrutura-de-dados/`](./Estrutura-de-dados) | Estrutura de Dados | Exercícios em C++ e C: condicionais, funções, vetores, modularização com arquivos `.h`, manipulação de strings, ordenação e busca binária |
 | [`Sistemas-Operacionais/`](./Sistemas-Operacionais) | Sistemas Operacionais | Instalação do Windows, pesquisa sobre SOs, máquinas virtuais e aplicação Node.js publicada em nuvem (Render e Vercel) |
 | [`Experimentos/`](./Experimentos) | — | Testes livres em C, fora das atividades das aulas |
 
@@ -24,6 +24,8 @@ exercícios e materiais produzidos ao longo do semestre, versionados conforme fo
 | [`Aula4/`](./Estrutura-de-dados/Aula4) | Funções em C: cálculo de média com prova substitutiva |
 | [`Aula5/`](./Estrutura-de-dados/Aula5) | Sistema de cadastro e estoque de produtos com vetores (`Tarefa.c`) |
 | [`Aula6/`](./Estrutura-de-dados/Aula6) | Modularização: calculadora com operações separadas em arquivos de cabeçalho (`soma.h`, `sub.h`, `mult.h`, `div.h`, `cubo.h`) |
+| [`Aula7/`](./Estrutura-de-dados/Aula7) | Manipulação de strings em C (`Tarefa.c`): conta caracteres, vogais, consoantes e palavras de uma frase, concatena com "Chuva não", substitui vogais e aplica uma cifra por deslocamento — cada versão guardada em uma linha de uma matriz `char[4][110]` |
+| [`Aula8/`](./Estrutura-de-dados/Aula8) | Ordenação e busca: *Bubble Sort* em um vetor de 13 números (`Atv1.c`) e de 13 letras (`Atv2.c`), contando as trocas, e **busca binária** no vetor ordenado (`Atv3.cpp`) |
 
 ### Sistemas Operacionais
 
@@ -55,7 +57,9 @@ Fatec-3-ciclo-ADS/
 │   ├── Aula3/          # C++: condicionais
 │   ├── Aula4/          # C: funções
 │   ├── Aula5/          # C: vetores (estoque)
-│   └── Aula6/          # C: modularização com .h
+│   ├── Aula6/          # C: modularização com .h
+│   ├── Aula7/          # C: strings (string.h e ctype.h)
+│   └── Aula8/          # C/C++: Bubble Sort e busca binária
 │
 ├── Sistemas-Operacionais/
 │   ├── Aula-3/
